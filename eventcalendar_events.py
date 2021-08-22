@@ -1,9 +1,5 @@
 """
-Project 1
-
-Class: CSCI 1913, Spring 2021, Section 10
-Professor: Jerald Thomas
-Student: Lauren Bastian (basti093)
+Set of functions for handling events
 """
 
 
