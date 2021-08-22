@@ -9,4 +9,3 @@ To run the program:
 
 _*Valid dates have a 4 digit year and occur between 1000 AD and 9999 AD_
 
-Running the test file "eventcalendar_test.py" will print nothing if no errors occur.
