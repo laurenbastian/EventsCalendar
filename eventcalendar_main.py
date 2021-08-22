@@ -37,7 +37,6 @@ def validate_input(date_string):
     date_list = (date_string.split("-"))
 
     # check if the list has 3 items
-    # DO WE HAVE TO ACCOUNT FOR NON-NUMERIC INPUTS????
     if len(date_list) != 3:
         return None
 
@@ -186,8 +185,16 @@ if __name__ == "__main__":
 
     # prompt user for a date and validate
     my_date = input("Enter a date: ")
-    my_date_tuple = validate_input(my_date)
     print()
 
+    while validate_input(my_date) is None:
+        print("Invalid date. Your date may be a leap day in the wrong year or have invalid formatting. "
+              "Valid dates are in the form mm-dd-yyyy or m-d-yyyy and are between the years"
+              " 1000 AD and 9999 AD.")
+        print()
+        my_date = input("Enter a date: ")
+        print()
+
+    my_date_tuple = validate_input(my_date)
     # print calendar
     print_calendar(my_date_tuple)
